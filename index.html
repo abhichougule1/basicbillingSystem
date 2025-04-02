@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Order System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Restaurant Order System</h1>
+    </header>
+
+    <main>
+        <section id="menu">
+            <h2>Menu</h2>
+
+            <div class="menu-category">
+                <h3>250 grams</h3>
+                <ul>
+                    <li data-price="50">Papdi 250g - ₹50</li>
+                    <li data-price="80">Chips (Spicy) 250g - ₹80</li>
+                    <li data-price="80">Chips (Salted) 250g - ₹80</li>
+                    <li data-price="50">Khara 250g - ₹50</li>
+                    <li data-price="35">toast 250g - ₹35</li>
+                    <li data-price="40">spatial toast 250g - ₹40</li>
+                    <li data-price="35">Butter 250g - ₹35</li>
+                    
+                </ul>
+            </div>
+
+
+
+
+            <div class="menu-category">
+                <h3>Snacks</h3>
+                <ul>
+                    <li data-price="10">Papdi - ₹10</li>
+                    <li data-price="10">Chips (Spicy) - ₹10</li>
+                    <li data-price="10">Chips (Salted) - ₹10</li>
+                    <li data-price="15">Bhadang - ₹15</li>
+                </ul>
+            </div>
+            <div class="menu-category">
+                <h3>Drinks</h3>
+                <ul>
+                    <li data-price="45">Sprite 750ml - ₹45</li>
+                    <li data-price="50">Sprite 1ltr - ₹50</li>
+                    <li data-price="20">Sprite 250ml - ₹20</li>
+                    <li data-price="100">Sprite 2.25ltr - ₹100</li>
+                    <li data-price="25">Maja 250ml - ₹25</li>
+                    <li data-price="45">Maja 600ml - ₹45</li>
+                    <li data-price="90">Maja 1.75ltr - ₹90</li>
+                    <li data-price="20">Limca 250ml - ₹20</li>
+                    <li data-price="50">Limca 1ltr - ₹50</li>
+                    <li data-price="45">Limca 750ml - ₹45</li>
+                    <li data-price="100">Limca 2.25ltr - ₹100</li>
+                    <li data-price="60">Praditor 350ml - ₹60</li>
+                    <li data-price="120">Monster 350ml - ₹120</li>
+                </ul>
+            </div>
+            <div class="menu-category">
+                <h3>Desserts</h3>
+                <ul>
+                    <li data-price="4">Ice Cream - ₹4</li>
+                    <li data-price="2">Cookies - ₹2</li>
+                    <li data-price="1">Biscuits - ₹1</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="tables">
+            <h2>Tables</h2>
+            <div class="table" id="table1">
+                <h3>Table 1</h3>
+                <div class="customers"></div>
+                <input type="text" placeholder="Enter Customer Name" class="customer-name" />
+                <button onclick="addCustomer('table1')">Add Customer</button>
+            </div>
+            <div class="table" id="table2">
+                <h3>Table 2</h3>
+                <div class="customers"></div>
+                <input type="text" placeholder="Enter Customer Name" class="customer-name" />
+                <button onclick="addCustomer('table2')">Add Customer</button>
+            </div>
+        </section>
+
+        <section id="parcel-orders">
+            <h2>Parcel Orders</h2>
+            <div class="parcel-order-section">
+                <input type="text" placeholder="Enter Customer Name for Parcel" class="parcel-customer-name" />
+                <select class="parcel-menu-select" onchange="toggleParcelOtherInput(this)">
+                    <option value="">Select an item</option>
+                </select>
+                <input type="text" class="parcel-other-input" placeholder="Specify other item" style="display:none;" />
+                <input type="number" class="parcel-other-price" placeholder="Price" style="display:none;" min="0" />
+                <button onclick="addParcelOrder()">Add Parcel Order</button>
+                <ul class="parcel-order-list"></ul>
+                <p>Total: ₹<span class="parcel-total">0</span></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Restaurant. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
