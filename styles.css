@@ -6,7 +6,7 @@ body {
 }
 
 header {
-    background-color: #ff6347; /* Tomato color */
+    background-color: #0d1e77; /* Tomato color */
     color: white;
     padding: 20px;
     text-align: center;
@@ -14,7 +14,7 @@ header {
 }
 
 main {
-    padding: 20px;
+    padding: 21px;
 }
 
 .table {
